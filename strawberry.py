@@ -1,8 +1,11 @@
 import os
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 beta_headers = {
-    "authorization": f"Bearer {os.environ['OPENAI_BETA_KEY']}",
+    "authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
     "openai-beta": "early-access-strawberry"
 }
 
